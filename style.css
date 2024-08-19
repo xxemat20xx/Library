@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    background-color: #fffcf2;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.alert {
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    right: 0;
+    top: 7em;
+    border-radius: 4px;
+    color: #fffcf2;
+    font-weight: 600;
+    visibility: hidden;
+    transition: 0.5s ease-in;
+}
+
+.alert-added {
+    background-color: #6bd283;
+    border-left: 8px solid #10922e;
+}
+
+.alert-deleted {
+    background-color: #ec2845;
+    border-left: 8px solid #c50e2a;
+}
+
+/* MODAL */
+.modal {
+    background-color: #ccc5b9;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    min-width: 420px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fffcf2;
+    padding: 2em;
+    text-align: center;
+    box-shadow: 10px 4px 33px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 4px 33px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 4px 33px -5px rgba(0, 0, 0, 0.75);
+    transition: 0.3s all;
+}
+
+.modal-inputs {
+    display: grid;
+    gap: 1em;
+}
+
+.modal-inputs input,
+select {
+    text-align: center;
+    padding: 1em;
+    border: none;
+    background-color: #ccc5b9;
+    color: #252422;
+}
+
+.btn {
+    color: #252422;
+    border: none;
+    background-color: #faedcd;
+    width: 120px;
+    height: 50px;
+    margin: 2em 1em;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #d8cbaa;
+}
+
+/* NAV */
+nav {
+    background-color: #252422;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+#nav-img {
+    margin: 0 1em;
+    width: 50px;
+    background-color: #fffcf2;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+#open-modal {
+    /*nav-button*/
+    width: 12em;
+    border-radius: 10px;
+
+}
+
+/* CONTAINER AND CARDS */
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+
+.cards {
+    /* display: grid;
+    grid-template-columns: repeat(3, 550px);
+    grid-auto-rows: 550px;
+    gap: 3em;
+    margin-top: 30px; */
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    gap: 4em;
+}
+
+.card {
+
+    background-color: #fffcf2;
+    padding: 1em;
+    box-shadow: 7px 8px 21px -4px rgba(0, 0, 0, 0.30);
+    -webkit-box-shadow: 7px 8px 21px -4px rgba(0, 0, 0, 0.30);
+    -moz-box-shadow: 7px 8px 21px -4px rgba(0, 0, 0, 0.30);
+    overflow: hidden;
+    height: 550px;
+}
+
+.img-container {
+    width: 100%;
+    height: 310px;
+}
+
+.card img {
+    background-position: center;
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 2em;
+}
+
+
+/* BUTTONS */
+.cards-btn {
+    text-align: right;
+}
+
+#btnRead,
+#btnDelete {
+
+    height: 40px;
+    border: none;
+}
+
+#btnRead {
+    background-color: #6bd283;
+    color: #fffcf2;
+    width: 10em;
+}
+
+#btnDelete {
+    background-color: #e63946;
+    color: #fff;
+    width: 5em;
+}
+
+#btnDelete:hover {
+    background-color: #a30d29;
+    transition: 0.5s ease;
+}
+
+#btn-addBook {
+    background-color: #6bd283;
+}
+
+#btn-cancel {
+    background-color: #4a4a49;
+    color: #fffcf2;
+}
+
+
+
+@media (max-width: 1400px) {
+    .cards {
+        grid-template-columns: 450px 450px;
+        gap: 4em;
+    }
+}
+
+@media (max-width: 912px) {
+    .cards {
+        grid-template-columns: auto;
+        grid-auto-rows: auto;
+        gap: 2em;
+    }
+
+    nav {
+        flex-direction: column;
+        padding: 1em;
+    }
+
+    #btnRead,
+    #btnDelete {
+
+        margin-top: 2em;
+    }
+
+    .alert {
+        top: 13em;
+    }
+}
