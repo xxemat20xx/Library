@@ -77,7 +77,7 @@ function deleteList(index) {
 
         alert.classList.add("alert-deleted");
         alert.style.visibility = "visible";
-        addedTitle.innerHTML = " Manga Deleted"
+        addedTitle.innerHTML = `<i class="fa-solid fa-trash"></i>  List Deleted`;
 
         setTimeout(() => {
             alert.style.visibility = "hidden";
@@ -118,7 +118,7 @@ document.addEventListener("click", function (e) {                   // ---------
             addBookToLibrary(title, url, author, pages, read);
             alert.classList.add("alert-added");
             alert.style.visibility = "visible";
-            addedTitle.innerHTML = ` You have added ${title}`;
+            addedTitle.innerHTML = `<i class="fa-solid fa-plus"></i> You have added ${title}`;
             setTimeout(() => {
                 alert.style.visibility = "hidden";
             }, 3000);

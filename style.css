@@ -14,13 +14,13 @@ body {
 .alert {
     padding: 20px 40px;
     min-width: 420px;
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 7em;
+    bottom: 25px;
     border-radius: 4px;
     color: #fffcf2;
     font-weight: 600;
-    visibility: hidden;
+    /* visibility: hidden; */
     transition: 0.5s ease-in;
 }
 
@@ -239,6 +239,10 @@ nav {
     }
 
     .alert {
-        top: 13em;
+        position: fixed;
+        top: 23%;
+        left: 30%;
+        transform: translate(-20%, -50%);
+        height: 10px;
     }
 }
